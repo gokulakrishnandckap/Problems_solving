@@ -5,22 +5,32 @@
 
 function primeLogic($Num)
 {
-    $emp = $Num." is a prime number";
+    if($Num == 1)
+    {
+        return false;
+    }
     for ($i=2; $i < $Num; $i++) { 
+      
         if($Num % $i == 0)
         {
-            $emp = $Num." is Not a prime number";
-            break;
-        }
-        else{
-            $emp = $Num." is a prime number";
+            return false;
         }
     }
-    return $emp;
+    return true;
 }
+$Number = 7;
 
+$result = primeLogic($Number);
 
-echo primeLogic(2);
+    if(!$result)
+    {
+        echo "Not a prime Number";
+    }
+    else
+    {
+        echo "It's prime Number";
+
+    }
 
 
 
