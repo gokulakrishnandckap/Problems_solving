@@ -56,15 +56,37 @@
 
 //Problem 3  
 
-Function reverseNumber($input){
-    $str = str_split($input);
-    for ($i=count($str)-1; $i >= 0 ; $i--) { 
-        echo $str[$i];
+// Function reverseNumber($input){
+//     $str = str_split($input);
+//     for ($i=count($str)-1; $i >= 0 ; $i--) { 
+//         echo $str[$i];
+//     }
+// }
+//  echo reverseNumber(123456);
+
+
+//problem 4
+
+$name=["racecar"];
+$check="";
+function palindrome($name)
+{
+    global $check;
+    $names = $name[0];
+
+    for($i=strlen($names)-1;$i>=0;$i--)
+    {
+        $check = $check.$names[$i];
+    }
+    if($check == $names)
+    {
+        return $check." is true"."\n";
+    }
+    else{
+        return $check." is false"."\n";
     }
 }
- echo reverseNumber(123456);
-
-
+echo palindrome($name);
 
 
 
