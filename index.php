@@ -67,27 +67,61 @@
 
 //problem 4
 
-$name=["racecar"];
-$check="";
-function palindrome($name)
-{
-    global $check;
-    $names = $name[0];
+// $name=["racecar"];
+// $check="";
+// function palindrome($name)
+// {
+//     global $check;
+//     $names = $name[0];
 
-    for($i=strlen($names)-1;$i>=0;$i--)
-    {
-        $check = $check.$names[$i];
-    }
-    if($check == $names)
-    {
-        return $check." is true"."\n";
+//     for($i=strlen($names)-1;$i>=0;$i--)
+//     {
+//         $check = $check.$names[$i];
+//     }
+//     if($check == $names)
+//     {
+//         return $check." is true"."\n";
+//     }
+//     else{
+//         return $check." is false"."\n";
+//     }
+// }
+// echo palindrome($name);
+
+
+
+//Problem 5
+
+
+
+
+
+
+$Input = readLine("Please enter a Number : ");
+
+
+    if(is_numeric($Input)){
+        fibonacciSeries($Input);
     }
     else{
-        return $check." is false"."\n";
+        echo "Please enter number Only";
+    }
+
+function fibonacciSeries($Input){
+
+    $num1 = 0;
+    $num2 = 1;
+
+    for($i=0;$i<$Input;$i++){
+
+        $result = $num1+$num2;
+        $num1 = $num2;
+        $num2 = $result;
+
+
+        echo $result;
+        echo "\n";
     }
 }
-echo palindrome($name);
-
-
 
 ?>
