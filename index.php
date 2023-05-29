@@ -129,27 +129,47 @@
 // problem 6
 
 
-$FactorialInput = readLine("Please enter a Number : ");
+// $FactorialInput = readLine("Please enter a Number : ");
 
 
-    if(is_numeric($FactorialInput)){
-        FactorialInput($FactorialInput);
+//     if(is_numeric($FactorialInput)){
+//         FactorialInput($FactorialInput);
+//     }
+//     else{
+//         echo "Please enter number Only";
+//     }
+
+
+//     function  FactorialInput($FactorialInput)
+//     {
+//         $str = $FactorialInput;
+//         $res = 0;
+//         for ($i=$FactorialInput-1; $i >= 1; $i--) { 
+//             $res = $str*$i;
+//             $str = $res;
+//         }
+//         echo $res;
+//         echo "\n";
+//     }
+
+
+//problem 7
+
+$Number = readLine("Please enter a Number : ");
+
+
+    if(is_numeric($Number)){
+        TableInput($Number);
     }
     else{
         echo "Please enter number Only";
     }
 
-
-    function  FactorialInput($FactorialInput)
+    function TableInput($Number)
     {
-        $str = $FactorialInput;
-        $res = 0;
-        for ($i=$FactorialInput-1; $i >= 1; $i--) { 
-            $res = $str*$i;
-            $str = $res;
+        for ($i=1; $i <= 10; $i++) { 
+            echo $i." "."*"." ".$Number." "."="." ".$i*$Number."\n";
         }
-        echo $res;
-        echo "\n";
     }
 
 ?>
